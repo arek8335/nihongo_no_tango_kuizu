@@ -1,7 +1,7 @@
 from enum import StrEnum
 
 
-class Level(StrEnum):
+class LEVELS(StrEnum):
     N5 = "N5"
     N4 = "N4"
     N3 = "N3"
@@ -9,7 +9,7 @@ class Level(StrEnum):
     N1 = "N1"
 
 
-class QuestionType(StrEnum):
-    READING = "reading"
-    ANTONYM = "antonym"
-    SYNONYM = "synonym"
+class QUESTIONS(StrEnum):
+    Reading = "reading"
+    Antonym = "antonym"
+    Synonym = "synonym"

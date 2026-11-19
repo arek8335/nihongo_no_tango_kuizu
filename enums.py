@@ -1,4 +1,4 @@
-from enum import StrEnum
+from enum import StrEnum, IntEnum
 
 
 class LEVELS(StrEnum):
@@ -13,3 +13,11 @@ class QUESTIONS(StrEnum):
     Reading = "reading"
     Antonym = "antonym"
     Synonym = "synonym"
+
+
+class SCORING(IntEnum):
+    Super = 15
+    Cool = 12
+    Good = 7
+    Bad = 4
+    Really_Bad = 0

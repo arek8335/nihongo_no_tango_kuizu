@@ -8,6 +8,9 @@ class Database:
     def __init__(self):
         self.path = Path("data")
         self.questions: dict[LEVELS, dict[QUESTIONS, list[dict]]] = {}
+        self.kanji_key = "kanji"
+        self.answers_key = "questions"
+        self.correct_answer_key = "answer"
 
     def load_data(self) -> None:
         for level in LEVELS:
@@ -17,6 +20,3 @@ class Database:
                     f"{self.path}/{level}/{question_type}.json", encoding="utf-8"
                 ) as f:
                     self.questions[level][question_type] = json.load(f)
-
-    def get(self, level: LEVELS, question_type: QUESTIONS) -> dict:
-        return self.questions[level][question_type]

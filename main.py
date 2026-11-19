@@ -1,11 +1,10 @@
-from database import Database
-from colors import Color
-from ui import UI
+from system import System
 
-w = Database()
-w.load_data()
-x = w.get("N5", "reading")
-# print(x[0])
-u = UI()
 
-print(u.welcome_msg)
+def main() -> int:
+    System().run()
+    return 0
+
+
+if __name__ == "__main__":
+    main()

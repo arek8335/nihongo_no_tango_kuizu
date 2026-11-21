@@ -103,7 +103,7 @@ class System:
             int_user_input = 0
             if user_input.isdigit():
                 int_user_input = int(user_input)
-            if int_user_input > 0 and int_user_input <= 4:
+            if 0 < int_user_input <= 4:
                 return self.actual_mondai[self.db.answers_key][int_user_input - 1]
             self.ui.print_wrong_command_msg()
 

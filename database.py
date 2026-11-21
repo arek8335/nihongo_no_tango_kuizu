@@ -6,7 +6,7 @@ from enums import LEVELS, QUESTIONS
 
 class Database:
     def __init__(self):
-        self.path = Path("data")
+        self.path = Path(__file__).resolve().parent / "data"
         self.questions: dict[LEVELS, dict[QUESTIONS, list[dict]]] = {}
         self.kanji_key = "kanji"
         self.answers_key = "questions"
@@ -17,6 +17,6 @@ class Database:
             self.questions[level] = {}
             for question_type in QUESTIONS:
                 with open(
-                    f"{self.path}/{level}/{question_type}.json", encoding="utf-8"
+                        f"{self.path}/{level}/{question_type}.json", encoding="utf-8"
                 ) as f:
                     self.questions[level][question_type] = json.load(f)

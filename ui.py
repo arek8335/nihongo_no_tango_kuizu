@@ -48,7 +48,7 @@ class UI:
         print(self.WRONG_COMMAND)
 
     def print_correct_question(
-        self, kanji: str, question_type: QUESTIONS, question_num: int
+            self, kanji: str, question_type: QUESTIONS, question_num: int
     ) -> None:
         print(f"{question_num}.({kanji}){self.QUESTION_TYPE_MSG[question_type]}")
 

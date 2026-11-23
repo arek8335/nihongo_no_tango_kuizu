@@ -1,0 +1,12 @@
+[project]
+name = "nihongo_no_tango_kuizu"
+version = "1.0"
+requires-python = ">=3.15.2"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=9.2.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
